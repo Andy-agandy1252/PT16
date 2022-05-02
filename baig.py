@@ -43,7 +43,7 @@ def kultura(frame):
         listbox.grid(row=2, column=1)
 
 def aprasymai(event):
-    frame2label1.config(image=sarasas_visko[listbox.get(listbox.curselection())][0])
+    #frame2label1.config(image=sarasas_visko[listbox.get(listbox.curselection())][0])
     frame2label2.config(text=sarasas_visko[listbox.get(listbox.curselection())][1])
 
 def miestu_pasirinkimas():
@@ -117,10 +117,12 @@ for frame in (frame1, frame2):
     frame.grid(row=0, column=0, sticky='news')
 
 #-----------------first Page-----
-frametitle = tk.Label(frame1, text='Atraskite Lietuvą iš naujo',
+frametitle = tk.Label(frame1,
+                      text='Atraskite Lietuvą iš naujo',
                        font=('Areal', 30, 'bold'),
                        bg='#F4EFEA', padx=200)
-framelable = tk.Label(frame1, text='I kurį miestą noretumėte vykti',
+framelable = tk.Label(frame1,
+                      text='I kurį miestą noretumėte vykti',
                       font=('Areal', 20, 'bold'),
                       bg='#F4EFEA')
 framebutton1 = tk.Button(frame1, text='Miestų sąrašas',
@@ -145,12 +147,30 @@ framebutton4 = tk.Button(frame1, text='Kultūros paveldai',
                          command=lambda: kultura(frame2),
                          bg='#F4EFEA')
 #--------------second Page------------
-frame2button_atgalipradzia = tk.Button(frame2, text='Pradzia',command=lambda: newwindow(frame1),bg='#F4EFEA')
-frame2button_atgalmiesta = tk.Button(frame2, text='I Miestus',command=lambda: miestai2(frame2),bg='#F4EFEA')
-listbox = tk.Listbox(frame2, bg='#F4EFEA',font='TimesNewRoman',width=46, height=30)
-frame2button1 = tk.Button(frame2, text='Pasirinkti',command=lambda: miestu_window(frame2), bg='#F4EFEA')
-frame2label1 = tk.Label(frame2, image='',bg='#F4EFEA')
-frame2label2 = tk.Label(frame2, text='',font='TimesNewRoman',bg='#F4EFEA')
+frame2button_atgalipradzia = tk.Button(frame2,
+                                       text='Pradzia',
+                                       command=lambda: newwindow(frame1),
+                                       bg='#F4EFEA')
+frame2button_atgalmiesta = tk.Button(frame2,
+                                     text='I Miestus',
+                                     command=lambda: miestai2(frame2),
+                                     bg='#F4EFEA')
+listbox = tk.Listbox(frame2,
+                     bg='#F4EFEA',
+                     font='TimesNewRoman',
+                     width=46,
+                     height=30)
+frame2button1 = tk.Button(frame2,
+                          text='Pasirinkti',
+                          command=lambda: miestu_window(frame2),
+                          bg='#F4EFEA')
+frame2label1 = tk.Label(frame2,
+                        image='',
+                        bg='#F4EFEA')
+frame2label2 = tk.Label(frame2,
+                        text='',
+                        font='TimesNewRoman',
+                        bg='#F4EFEA')
 window.bind("<<ListboxSelect>>", aprasymai)
 
 #===============migtuku isdestimas-------
