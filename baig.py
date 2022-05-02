@@ -43,7 +43,7 @@ def kultura(frame):
         listbox.grid(row=2, column=1)
 
 def aprasymai(event):
-    #frame2label1.config(image=sarasas_visko[listbox.get(listbox.curselection())][0])
+    frame2label1.config(image=sarasas_visko[listbox.get(listbox.curselection())][0])
     frame2label2.config(text=sarasas_visko[listbox.get(listbox.curselection())][1])
 
 def miestu_pasirinkimas():
