@@ -518,8 +518,3 @@ kultura_visi = {**vilniaus_kultura,
                 **taurages_kultura,
                 **telsiu_kultura,
                 **ukmerges_kultura}
-#---------1frame photos-----
-miestusaraso_foto = PhotoImage(file='C:\\Users\\User\\PycharmProjects\\newpythonProject\\image\\miestai.png')
-paminklu_foto = PhotoImage(file='C:\\Users\\User\\PycharmProjects\\newpythonProject\\image\\paminklai.png')
-muzieju_foto = PhotoImage(file='C:\\Users\\User\\PycharmProjects\\newpythonProject\\image\\muziejai.png')
-kulturos_foto = PhotoImage(file='C:\\Users\\User\\PycharmProjects\\newpythonProject\\image\\kultura.png')
